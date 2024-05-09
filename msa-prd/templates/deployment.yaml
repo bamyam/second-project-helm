@@ -43,10 +43,10 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: config-volume
-          mountPath: /etc/nginx/conf.d/default.conf
+          mountPath: /etc/nginx/conf.d
           subPath: default.conf
         - name: html-volume
-          mountPath: /usr/share/nginx/html/index.html
+          mountPath: /usr/share/nginx/html
           subPath: index.html
       volumes:
       - name: config-volume
@@ -54,4 +54,4 @@ spec:
           name: nginx-config
       - name: html-volume
         configMap:
-          name: nginx-html
+          name: html-content
