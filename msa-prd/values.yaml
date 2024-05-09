@@ -8,21 +8,21 @@ services:
   frontendapp:
     name: frontendapp
     image: "bamyam/frontendapp" # Replace with your actual image name
-    tag: v20
+    tag: v21
     port: 3000
     nodeport: 32321
 
   visitorapp:
     name: visitorapp  
     image: "bamyam/visitorapp" # Replace with your actual image name
-    tag: v20
+    tag: v21
     port: 8000
     nodeport: 32322
 
   adminapp:
     name: adminapp  
     image: "bamyam/adminapp" # Replace with your actual image name
-    tag: v20
+    tag: v21
     port: 8010
     nodeport: 32323
 
