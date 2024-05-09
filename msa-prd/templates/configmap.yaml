@@ -13,21 +13,21 @@ data:
   default.conf: |
     # Nginx configuration for reverse proxy
     server {
-      listen 80;
-      server_name kimseogeun.com;
+       listen 80;
+       server_name kimseogeun.com;
 
 
-      location / {
-        proxy_pass http://msa-frontend-service:3000/;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-        proxy_set_header X-Forwarded-Prefix /main;
-        proxy_set_header X-Forwarded-Uri $uri;
+       location / {
+          proxy_pass http://msa-frontend-service:3000/;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection 'upgrade';
+          proxy_set_header Host $host;
+          proxy_cache_bypass $http_upgrade;
+          proxy_set_header X-Forwarded-Prefix /main;
+          proxy_set_header X-Forwarded-Uri $uri;
+       }
      }
-   }
 ---
 apiVersion: v1
 kind: ConfigMap
