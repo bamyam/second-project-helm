@@ -54,4 +54,4 @@ spec:
           name: nginx-config
       - name: html-volume
         configMap:
-          name: html-content
+          name: nginx-html
